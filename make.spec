@@ -7,13 +7,13 @@ Version:                        4.3
 Release:                        %{release_prefix}%{?dist}
 Epoch:                          1
 License:                        GPLv3+
-URL:                            http://www.gnu.org/software/make/
+URL:                            https://www.gnu.org/software/make/
 Vendor:                         Package Store <https://pkgstore.github.io>
 Packager:                       Kitsune Solar <kitsune.solar@gmail.com>
 
-Source0:                        http://ftp.gnu.org/gnu/make/make-%{version}.tar.gz
+Source0:                        https://ftp.gnu.org/gnu/make/make-%{version}.tar.gz
 # Signature
-Source900:                      http://ftp.gnu.org/gnu/make/make-%{version}.tar.gz.sig
+Source900:                      https://ftp.gnu.org/gnu/make/make-%{version}.tar.gz.sig
 
 %if 0%{?rhel} > 0
 # This gives the user the option of saying --with guile, but defaults to WITHOUT
