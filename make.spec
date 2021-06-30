@@ -13,7 +13,7 @@ Packager:                       Kitsune Solar <kitsune.solar@gmail.com>
 
 Source0:                        http://ftp.gnu.org/gnu/make/make-%{version}.tar.gz
 # Signature
-Source900:                      https://www.apache.org/dist/httpd/httpd-%{version}.tar.gz.sig
+Source900:                      http://ftp.gnu.org/gnu/make/make-%{version}.tar.gz.sig
 
 %if 0%{?rhel} > 0
 # This gives the user the option of saying --with guile, but defaults to WITHOUT
