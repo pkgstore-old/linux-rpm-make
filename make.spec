@@ -11,7 +11,9 @@ URL:                            http://www.gnu.org/software/make/
 Vendor:                         Package Store <https://pkgstore.github.io>
 Packager:                       Kitsune Solar <kitsune.solar@gmail.com>
 
-Source0:                        ftp://ftp.gnu.org/gnu/make/make-%{version}.tar.gz
+Source0:                        http://ftp.gnu.org/gnu/make/make-%{version}.tar.gz
+# Signature
+Source900:                      https://www.apache.org/dist/httpd/httpd-%{version}.tar.gz.sig
 
 %if 0%{?rhel} > 0
 # This gives the user the option of saying --with guile, but defaults to WITHOUT
