@@ -7,7 +7,7 @@ A GNU tool for controlling the generation of executables and other non-source fi
 ### Fedora COPR
 
 ```
-$ dnf copr enable pkgstore/make
+$ dnf copr enable pkgstore/build
 $ dnf install -y make
 ```
 
