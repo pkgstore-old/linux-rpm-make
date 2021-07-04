@@ -23,6 +23,13 @@ $ dnf install -y make
 $ dnf upgrade -y make
 ```
 
+## Remove
+
+```
+$ dnf erase -y make
+$ dnf copr remove pkgstore/build
+```
+
 ## How to Build
 
 1. Get source from [src.fedoraproject.org](https://src.fedoraproject.org/rpms/make).
