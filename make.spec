@@ -1,4 +1,4 @@
-%global release_prefix          100
+%global release_prefix          101
 
 # -*- coding: utf-8 -*-
 Summary:                        A GNU tool which simplifies the build process for users
@@ -117,6 +117,15 @@ echo ============END TESTING===========
 %{_includedir}/gnumake.h
 
 %changelog
+* Mon Mar 28 2022 Package Store <mail@z17.dev> - 1:4.3-101
+- UPD: Rebuild by Package Store.
+
+* Thu Jan 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 1:4.3-7
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
+
+* Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 1:4.3-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
 * Wed Jun 30 2021 Package Store <kitsune.solar@gmail.com> - 1:4.3-100
 - UPD: Move to Package Store.
 - UPD: License.
