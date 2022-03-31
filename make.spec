@@ -1,4 +1,4 @@
-%global release_prefix          101
+%global release_prefix          1000
 
 # -*- coding: utf-8 -*-
 Summary:                        A GNU tool which simplifies the build process for users
@@ -8,12 +8,8 @@ Release:                        %{release_prefix}%{?dist}
 Epoch:                          1
 License:                        GPLv3+
 URL:                            https://www.gnu.org/software/make/
-Vendor:                         Package Store <https://pkgstore.github.io>
-Packager:                       Kitsune Solar <kitsune.solar@gmail.com>
 
-Source0:                        https://ftp.gnu.org/gnu/make/make-%{version}.tar.gz
-# Signature
-Source900:                      https://ftp.gnu.org/gnu/make/make-%{version}.tar.gz.sig
+Source0:                        %{name}-%{version}.tar.xz
 
 %if 0%{?rhel} > 0
 # This gives the user the option of saying --with guile, but defaults to WITHOUT
@@ -23,20 +19,17 @@ Source900:                      https://ftp.gnu.org/gnu/make/make-%{version}.tar
 %bcond_without guile
 %endif
 
-Patch0:                         make-4.3-getcwd.patch
-
+Patch0:                         %{name}-4.3-getcwd.patch
 # Assume we don't have clock_gettime in configure, so that
 # make is not linked against -lpthread (and thus does not
 # limit stack to 2MB).
-Patch1:                         make-4.0-noclock_gettime.patch
-
+Patch1:                         %{name}-4.0-noclock_gettime.patch
 # BZs #142691, #17374
-Patch2:                         make-4.3-j8k.patch
-
+Patch2:                         %{name}-4.3-j8k.patch
 # https://bugzilla.redhat.com/show_bug.cgi?id=1827850
 # https://savannah.gnu.org/bugs/?58232
 # Remove on next make rebase
-Patch3:                         make-4.3-cloexec.patch
+Patch3:                         %{name}-4.3-cloexec.patch
 
 # autoreconf
 BuildRequires:                  make
@@ -117,7 +110,11 @@ echo ============END TESTING===========
 %{_includedir}/gnumake.h
 
 %changelog
-* Mon Mar 28 2022 Package Store <mail@z17.dev> - 1:4.3-101
+* Thu Mar 31 2022 Package Store <pkgstore@mail.ru> - 1:4.3-1000
+- UPD: Rebuild by Package Store.
+- UPD: File "make.spec".
+
+* Mon Mar 28 2022 Package Store <pkgstore@mail.ru> - 1:4.3-101
 - UPD: Rebuild by Package Store.
 
 * Thu Jan 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 1:4.3-7
@@ -125,10 +122,6 @@ echo ============END TESTING===========
 
 * Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 1:4.3-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
-
-* Wed Jun 30 2021 Package Store <kitsune.solar@gmail.com> - 1:4.3-100
-- UPD: Move to Package Store.
-- UPD: License.
 
 * Fri Feb 19 2021 DJ Delorie <dj@redhat.com> - 1:4.3-5
 - Allow users to build with or without guile support as desired.
